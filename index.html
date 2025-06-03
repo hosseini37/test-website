@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماشین‌حساب و کد مورس</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>ماشین‌حساب و کد مورس</h1>
-    </header>
-    <main>
-        <!-- بخش ماشین‌حساب -->
-        <section id="calculator">
-            <h2>ماشین‌حساب</h2>
-            <input type="text" id="display" readonly>
-            <div class="buttons">
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('/')">/</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('*')">*</button>
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('-')">-</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('.')">.</button>
-                <button onclick="calculate()">=</button>
-                <button onclick="appendToDisplay('+')">+</button>
-            </div>
-        </section>
+<html lang="en">
 
-        <!-- بخش کد مورس -->
-        <section id="morse">
-            <h2>تبدیل به کد مورس</h2>
-            <input type="text" id="morseInput" placeholder="متن خود را وارد کنید">
-            <button onclick="convertToMorse()">تبدیل به مورس</button>
-            <p id="morseOutput"></p>
-        </section>
-    </main>
-    <script src="script.js"></script>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div>
+        <h1>ماشین حساب آنلاین</h1>
+        <h2><span>www.codeamoozan.ir</span> توسط: آموزشگاه کدآموزان</h2>
+    </div>
+
+    <form name="calform" class="calform" action="index.html" method="post">
+        <input type="text" name="answer" id="answer-display" />
+        <br />
+        <input type="button" class="num-btn" value="C" onclick="calform.answer .value=''" />
+        <input type="button" class="num-btn" value="<"
+            onclick="calform.answer .value=calform.answer .value.substring(0,calform.answer .value.length*1-1)" />
+        <input type="button" class="num-btn" value="00" onclick="calform.answer .value+='00'" />
+        <input type="button" class="oprator" value="/" onclick="calform.answer .value+='/'" />
+        <br />
+        <input type="button" class="num-btn" value="7" onclick="calform.answer .value+='7'" />
+        <input type="button" class="num-btn" value="8" onclick="calform.answer .value+='8'" />
+        <input type="button" class="num-btn" value="9" onclick="calform.answer .value+='9'" />
+        <input type="button" class="oprator" value="*" onclick="calform.answer .value+='*'" />
+        <br />
+        <input type="button" class="num-btn" value="4" onclick="calform.answer .value+='4'" />
+        <input type="button" class="num-btn" value="5" onclick="calform.answer .value+='5'" />
+        <input type="button" class="num-btn" value="6" onclick="calform.answer .value+='6'" />
+        <input type="button" class="oprator" value="-" onclick="calform.answer .value+='-'" />
+        <br />
+        <input type="button" class="num-btn" value="1" onclick="calform.answer .value+='1'" />
+        <input type="button" class="num-btn" value="2" onclick="calform.answer .value+='2'" />
+        <input type="button" class="num-btn" value="3" onclick="calform.answer .value+='3'" />
+        <input type="button" class="oprator" value="+" onclick="calform.answer .value+='+'" />
+        <br />
+        <input type="button" id="zero" value="0" onclick="calform.answer .value+='0'" />
+        <input type="button" class="num-btn" value="." onclick="calform.answer .value+='.'" />
+        <input type="button" class="oprator" value="=" onclick="calform.answer .value=eval(calform.answer.value)" />
+    </form>
 </body>
-                </html>
+
+</html>
