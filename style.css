@@ -1,16 +1,79 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Vazir', sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: rgb(20, 30, 50); /* پس‌زمینه تیره با RGB */
+    color: rgb(200, 200, 200); /* رنگ متن روشن */
     margin: 0;
     padding: 20px;
 }
 
 h1 {
-    color: #2c3e50;
+    color: rgb(100, 255, 150); /* سبز روشن برای تیتر */
 }
 
-p {
-    color: #555;
-    font-size: 18px;
+h2 {
+    color: rgb(255, 150, 100); /* نارنجی برای زیرتیترها */
 }
+
+/* استایل ماشین‌حساب */
+#calculator {
+    background-color: rgb(40, 50, 70);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgb(100, 150, 255); /* آبی روشن */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(80, 120, 200); /* آبی تیره‌تر برای هاور */
+}
+
+/* استایل کد مورس */
+#morse {
+    background-color: rgb(40, 50, 70);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#morseInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#morseOutput {
+    color: rgb(255, 200, 100); /* زرد روشن برای خروجی مورس */
+    font-size: 18px;
+    }
